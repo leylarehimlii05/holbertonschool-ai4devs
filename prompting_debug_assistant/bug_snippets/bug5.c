@@ -12,8 +12,9 @@ int main() {
     strcpy(result, str1);
     strcat(result, str2);
     
-    printf("Result: %s\n", result);
-    printf("Length: %lu\n", sizeof(result));
+    printf("Result string output: %s\n", result);
+    printf("Allocated pointer length: %lu\n", sizeof(result));
     
+    free(result);
     return 0;
 }
