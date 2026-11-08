@@ -13,4 +13,8 @@ async function updateActiveUsers(userList) {
     return activeUsers;
 }
 
-updateActiveUsers(users).then(res => console.log(res));
+console.log("Updating active user records...");
+updateActiveUsers(users).then(res => {
+    console.log("Updated user list result:");
+    console.log(res);
+});
