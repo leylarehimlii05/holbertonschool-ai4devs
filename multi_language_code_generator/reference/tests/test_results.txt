@@ -1,0 +1,19 @@
+$ python3 -m unittest discover -v reference/tests
+
+test_01_empty_logs (test_log_analyzer.TestLogAnalyzer) ... ok
+test_02_whitespace_lines (test_log_analyzer.TestLogAnalyzer) ... ok
+test_03_single_valid_request (test_log_analyzer.TestLogAnalyzer) ... ok
+test_04_mixed_errors_and_error_rate (test_log_analyzer.TestLogAnalyzer) ... ok
+test_05_dash_byte_size (test_log_analyzer.TestLogAnalyzer) ... ok
+test_06_malformed_lines_skipped (test_log_analyzer.TestLogAnalyzer) ... ok
+test_07_top_endpoints_tie_breaking (test_log_analyzer.TestLogAnalyzer) ... ok
+test_08_error_rate_rounding (test_log_analyzer.TestLogAnalyzer) ... ok
+test_09_redirects_not_errors (test_log_analyzer.TestLogAnalyzer) ... ok
+test_10_all_errors (test_log_analyzer.TestLogAnalyzer) ... ok
+test_11_parse_line_structure (test_log_analyzer.TestLogAnalyzer) ... ok
+test_12_analyze_file (test_log_analyzer.TestLogAnalyzer) ... ok
+
+----------------------------------------------------------------------
+Ran 12 tests in 0.004s
+
+OK
