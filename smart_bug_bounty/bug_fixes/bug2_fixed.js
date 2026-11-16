@@ -11,4 +11,22 @@ async function calculateCartTotal(cartItems, fetchDiscountRate) {
   return Math.round(subtotal * 100) / 100;
 }
 
+// Validation tests
+(async () => {
+  const mockRates = { books: 0.1, electronics: 0.2 };
+  const mockFetch = async (cat) => mockRates[cat] || 0;
+
+  const items = [
+    { category: "books", price: 19.99, quantity: 1 },
+    { category: "electronics", price: 5.5, quantity: 1 },
+  ];
+
+  const total = await calculateCartTotal(items, mockFetch);
+  console.assert(total === 22.39, `Expected 22.39, got ${total}`);
+
+  const emptyTotal = await calculateCartTotal([], mockFetch);
+  console.assert(emptyTotal === 0, `Expected 0, got ${emptyTotal}`);
+  console.log("bug2_fixed.js: All test cases passed!");
+})();
+
 module.exports = { calculateCartTotal };
